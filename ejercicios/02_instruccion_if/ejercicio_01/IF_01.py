@@ -35,11 +35,11 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
 
-        edad= int(self.txt_edad.get())
+        edad = int(self.txt_edad.get())
         if edad == 18:
-            mensaje="Usted tiene 18 años"
+            mensaje = "Usted tiene 18 años"
         else:
-            mensaje ="Usted no tiene 18 años"
+            mensaje = "Usted no tiene 18 años"
         alert("Resultado", mensaje)
         # dos valores posibles: true/false
         #numero = prompt("numero", "ingrese num")
