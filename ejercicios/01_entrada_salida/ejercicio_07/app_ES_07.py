@@ -11,14 +11,14 @@ apellido:
 Ejercicio: entrada_salida_07
 ---
 Enunciado:
-Al presionar el botón  que corresponde a cada operación (suma, resta, multiplicación, y división), 
-se deberán obtener los valores contenidos en las cajas de texto (txtOperadorA y txtOperadorB), 
-transformarlos en números enteros, realizar dicha operación y luego mostrar el resultado 
-de la misma utilizando el Dialog Alert. Ej: "El resultado de la …… es: 755"  
+Al presionar el botón  que corresponde a cada operación (suma, resta, multiplicación, y división),
+se deberán obtener los valores contenidos en las cajas de texto (txtOperadorA y txtOperadorB),
+transformarlos en números enteros, realizar dicha operación y luego mostrar el resultado
+de la misma utilizando el Dialog Alert. Ej: "El resultado de la …… es: 755"
 '''
 
 class App(customtkinter.CTk):
-    
+
     def __init__(self):
         super().__init__()
 
@@ -27,16 +27,16 @@ class App(customtkinter.CTk):
 
         self.label1 = customtkinter.CTkLabel(master=self, text="Operador A")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
-        
+
         self.txt_operador_a = customtkinter.CTkEntry(master=self)
         self.txt_operador_a.grid(row=0, column=1)
-        
+
         self.label2 = customtkinter.CTkLabel(master=self, text="Operador B")
         self.label2.grid(row=1, column=0, padx=20, pady=10)
-        
+
         self.txt_operador_b = customtkinter.CTkEntry(master=self)
         self.txt_operador_b.grid(row=1, column=1)
-        
+
         self.btn_sumar = customtkinter.CTkButton(master=self, text="Sumar", command=self.btn_sumar_on_click)
         self.btn_sumar.grid(row=2, pady=10, columnspan=2, sticky="nsew")
 
@@ -50,17 +50,29 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+         num1=int(self.txt_operador_a.get())
+         num2=int(self.txt_operador_b.get())
+         alert(title="Suma", message="El resultado de la suma es " +str(num1+num2))
+         pass
 
     def btn_restar_on_click(self):
-        pass
+         num1=int(self.txt_operador_a.get())
+         num2=int(self.txt_operador_b.get())
+         alert(title="Resta", message="El resultado de la resta es " +str(num1-num2))
+         pass
 
     def btn_multiplicar_on_click(self):
-        pass
+         num1=int(self.txt_operador_a.get())
+         num2=int(self.txt_operador_b.get())
+         alert(title="Multiplicación", message="El resultado de la multiplicación es " +str(num1*num2))
+         pass
 
     def btn_dividir_on_click(self):
-        pass
-        
+         num1=int(self.txt_operador_a.get())
+         num2=int(self.txt_operador_b.get())
+         alert(title="División", message="El resultado de la división es " +str(num1/num2))
+         pass
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
