@@ -31,7 +31,7 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         """Agregue una linea"""
         alert(title="ej1", message="Esto no anda, funciona")
-        pass
+
 
 
 if __name__ == "__main__":

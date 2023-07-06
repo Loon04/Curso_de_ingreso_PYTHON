@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Anahí Julieta
+apellido: González Pineda
 ---
 Ejercicio: instrucion_if_01
 ---
@@ -16,7 +16,7 @@ transformarlo en número, si coincide con el valor 18, mostrar el mensaje “Ust
 '''
 
 class App(customtkinter.CTk):
-    
+
     def __init__(self):
         super().__init__()
 
@@ -25,20 +25,34 @@ class App(customtkinter.CTk):
 
         self.label1 = customtkinter.CTkLabel(master=self, text="Edad")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
-        
+
         self.txt_edad = customtkinter.CTkEntry(master=self)
         self.txt_edad.grid(row=0, column=1)
-                
+
         self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
 
     def btn_mostrar_on_click(self):
-        pass
 
-        
-        
-    
+        edad= int(self.txt_edad.get())
+        if edad == 18:
+            mensaje="Usted tiene 18 años"
+        else:
+            mensaje ="Usted no tiene 18 años"
+        alert("Resultado", mensaje)
+        # dos valores posibles: true/false
+        #numero = prompt("numero", "ingrese num")
+        #numero= int(numero)
+
+        #if numero > 10:
+        #    mensaje= "es mayor"
+        #else:
+        #    mensaje= "es menor "
+
+        #alert("resultado", mensaje)
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
