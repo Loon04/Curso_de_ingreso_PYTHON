@@ -21,20 +21,35 @@ Al presionar el botón  'Calcular', se deberá calcular una nota aleatoria entre
 '''
 
 class App(customtkinter.CTk):
-    
+
     def __init__(self):
         super().__init__()
 
         # configure window
         self.title("UTN Fra")
 
-        self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
-        self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
+        self.btn_calcular = customtkinter.CTkButton(master=self, text="Calcular", command=self.btn_mostrar_on_click)
+        self.btn_calcular.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
 
     def btn_mostrar_on_click(self):
-        pass  
-            
+
+        numero = random.randrange(1,11)
+
+        if numero >= 6 and numero <= 10:
+            mensaje = "Promoción directa, la nota es "
+        elif numero ==4 or numero == 5:
+            mensaje = "Aprobado la nota es "
+        elif numero <= 3 and numero >= 1:
+            mensaje = "Desaprobado, la nota es "
+
+
+        #alert("Notas", mensaje + str(numero))
+
+        print(mensaje + str(numero))
+
+
+
 
 if __name__ == "__main__":
     app = App()

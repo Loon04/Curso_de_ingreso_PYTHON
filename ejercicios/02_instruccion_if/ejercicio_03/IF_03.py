@@ -44,6 +44,34 @@ class App(customtkinter.CTk):
         pass
 
 
+        #pais = "china"
+
+        #if pais == "china":
+        #    mensaje = "debera pagar un 10% de impuestos"
+        #else:
+        #    if pais == "eeuu":
+        #        mensaje = "debera pagar un 20% de impuestos"
+        #    else:
+        #        #que no es de china y tampoco de eeuu
+        #        if pais == "brasil":
+        #            mensaje = "debera pagar el 5% de impuestos"
+        #        else:
+        #            mensaje = "no trabajamos con ese pais"
+
+
+        #if pais == "china":
+        #    mensaje = "debera pagar un 10% de impuestos"
+        #elif pais == "eeuu":
+        #        mensaje = "debera pagar un 20% de impuestos"
+        #        #que no es de china y tampoco de eeuu
+        #elif pais == "brasil":
+        #            mensaje = "debera pagar el 5% de impuestos"
+        #else:
+        #    mensaje = "no trabajamos con ese pais"
+
+
+
+
 
 
 if __name__ == "__main__":
