@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre: Anahí Julieta
+apellido: González Pineda
 ---
 Ejercicio: instrucion_if_09
 ---
@@ -33,11 +33,6 @@ class App(customtkinter.CTk):
 
         print(numero)
 
-
-
-
-
-        pass
 
 
 if __name__ == "__main__":

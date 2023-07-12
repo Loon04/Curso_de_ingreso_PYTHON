@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Anahí Julieta
+apellido: González Pineda
 ---
 Ejercicio: instrucion_if_06
 ---
@@ -40,10 +40,26 @@ class App(customtkinter.CTk):
 
         if edad < 9:
             mensaje = "Es menor de edad"
-        elif edad >= 10 and edad <= 12:
+        elif edad >= 10 and edad <= 12: #(edad >= 10)
             mensaje = "Es pre-adolescente"
-        elif edad >= 13 and edad <= 17:
+        elif edad >= 13 and edad <= 17: #(edad >= 13)
             mensaje = "Es adolescente"
+        elif edad >= 18:
+            mensaje = "Es mayor"
+
+        """""
+        MEJOR METODO
+
+        if (edad >= 18):
+            mensaje = "MAYOR"
+        elif (edad >= 13):
+            mensaje = "ADOLESCENTE"
+        elif (edad >= 10):
+            mensaje = "PRE-ADOLESCENTE"
+        else:
+            mensaje = "MENOR"
+
+        """""
 
         alert("informacion",mensaje)
 

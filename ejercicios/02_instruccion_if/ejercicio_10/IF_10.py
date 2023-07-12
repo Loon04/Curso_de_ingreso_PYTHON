@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre: Anahí Julieta
+apellido: González Pineda
 ---
 Ejercicio: instrucion_if_10
 ---
