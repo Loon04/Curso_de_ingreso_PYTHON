@@ -45,42 +45,42 @@ class App(customtkinter.CTk):
         cantidad = int(self.combobox_cantidad.get())
         marca = self.combobox_marca.get()
         precio = 800  * cantidad
+        descuento = None
 
         #A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%.
         if cantidad >= 6:
-            precio_final = precio - (precio * 50/100)
+            descuento = 50
         #B.	Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % y si es de otra marca el descuento es del 30%.
         elif cantidad == 5:
             if marca == "ArgentinaLuz":
-                precio_final = precio - (precio * 40/100)
+                descuento = 40
             else:
-                precio_final = precio - (precio * 30/100)
+                descuento = 30
         #C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace un descuento del 25 % y si es de otra marca el descuento es del 20%
         elif cantidad == 4:
             if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
-                precio_final = precio - (precio * 25/100)
+                descuento = 25
             else:
-                precio_final = precio - (precio * 20/100)
+                descuento = 20
         #D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
         elif cantidad == 3 :
             if marca == "ArgentinaLuz":
-                precio_final = precio - (precio * 15/100)
+                descuento = 15
             elif marca == "FelipeLamparas":
-                precio_final = precio - (precio * 10/100)
+                descuento = 10
             else:
-                precio_final = precio - (precio * 5/100)
+                descuento = 5
         else:
-            precio_final = precio
+            descuento = 0
+
+        precio_final = precio - (precio * descuento/100)
         #E.	Si el importe final con descuento suma más de $4000  se obtien un descuento adicional de 5%.
         if precio_final >= 4000:
-            precio_final = precio_final - (precio_final * 5/100)
+            descuento = 5
+            precio_final = precio_final - (precio_final * descuento/100)
 
-        if cantidad <= 2:   #como hago
-            mensaje = "El precio es "
-        else:
-            mensaje ="El precio con descuento es "
 
-        alert("TP",mensaje + str(precio_final))
+        alert("TP","El total de su compra es: " + str(precio_final))
 
 
 if __name__ == "__main__":
