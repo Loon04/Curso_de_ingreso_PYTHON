@@ -6,21 +6,21 @@ import customtkinter
 
 '''
 Enunciado:
-Al presionar el botón ‘Comenzar ingreso’, solicitar mediante prompt todos los números que el usuario quiera, 
-hasta que presione el botón Cancelar (en el prompt) o el usuario ingrese cero. 
-Calcular la suma acumulada de los positivos y multiplicar los negativos. 
+Al presionar el botón ‘Comenzar ingreso’, solicitar mediante prompt todos los números que el usuario quiera,
+hasta que presione el botón Cancelar (en el prompt) o el usuario ingrese cero.
+Calcular la suma acumulada de los positivos y multiplicar los negativos.
 Luego informar los resultados en las cajas de texto txt_suma_acumulada y txt_producto
 
 '''
 
 class App(customtkinter.CTk):
-    
+
     def __init__(self):
         super().__init__()
 
         # configure window
         self.title("UTN FRA")
-        
+
         self.txt_suma_acumulada = customtkinter.CTkEntry(master=self, placeholder_text="Suma acumulada")
         self.txt_suma_acumulada.grid(row=0, padx=20, pady=20)
 
@@ -32,9 +32,33 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
-        pass
 
-    
+        suma_numeros = 0
+        multi_negativos  = 1
+        bandera = True
+
+        while bandera:
+            numero = prompt("ej_8", "ingrese un numero")
+            if (numero == None or numero == "0"):
+                bandera = False
+            if numero != None:
+                numero = int(numero)
+                if numero > 0:
+                    suma_numeros = suma_numeros + numero
+                elif numero < 0:
+                    multi_negativos = numero * multi_negativos
+
+        self.txt_suma_acumulada.delete(0,10000)
+        self.txt_suma_acumulada.insert(0,suma_numeros)
+        self.txt_producto.delete(0,10000)
+        self.txt_producto.insert(0,multi_negativos)
+
+
+
+
+
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

@@ -25,11 +25,12 @@ class App(customtkinter.CTk):
 
 
     def btn_validar_letra_on_click(self):
-        letra = prompt("ej_5","ingrese una letra")
-        while letra != "U" or letra != "T" or letra != "N":
-            letra = prompt("ej_5","intentelo de nuevo")
+        letra = prompt("ej_5","ingrese una letra").upper()
+        while letra not in ["U","T","N"]:  # letra != "U" and != "T" and != "N"
+            letra = prompt("ej_5","intentelo de nuevo").upper()
         pass
 
+#// NOT IN and IN allow you to quickly determine if a given value is or isn’t part of a collection of values.
 
 if __name__ == "__main__":
     app = App()

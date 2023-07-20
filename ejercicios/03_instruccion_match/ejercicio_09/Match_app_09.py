@@ -59,20 +59,19 @@ class App(customtkinter.CTk):
         estaciones = self.combobox_estaciones.get()
         destinos = self.combobox_destino.get()
         precio_base = 15000
-        oferta = 0
 
         match destinos:
             case "Bariloche":
                 match estaciones:
-                    case "invierno":
-                        oferta = 1.20
-                    case "verano":
+                    case "Invierno":
+                        oferta =1.20
+                    case "Verano":
                         oferta = 0.80
                     case "Primavera"    |   "Otoño":
                         oferta = 1.10
             case "Cataratas":
                 match estaciones:
-                    case "invierno":
+                    case "Invierno":
                         oferta = 0.80
                     case "Verano":
                         oferta = 1.10
@@ -80,7 +79,7 @@ class App(customtkinter.CTk):
                         oferta = 1.10
             case "Cordoba":
                 match estaciones:
-                    case "invierno":
+                    case "Invierno":
                         oferta = 0.90
                     case "Verano":
                         oferta = 1.10
@@ -88,9 +87,9 @@ class App(customtkinter.CTk):
                         oferta = 1
             case "Mar del plata":
                 match estaciones:
-                    case "invierno":
+                    case "Invierno":
                         oferta = 0.80
-                    case "verano":
+                    case "Verano":
                         oferta = 1.20
                     case "Primavera"    |   "Otoño":
                         oferta = 1.10
