@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-Rising BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada 
-por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
+Rising BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada
+por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos.
 
 Los datos requeridos son los siguientes:
     Apellido
@@ -50,8 +50,41 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        pass
 
+        bandera = 1
+        tipo =self.combobox_tipo.get()
+
+        while bandera == 1:
+            apellido = prompt("TP5","Ingrese su apellido")
+            if apellido == None:
+                bandera = 0
+            edad = prompt("TP5","Ingrese su edad")
+            if edad == None:
+                bandera = 0
+            else:
+                edad = int(edad)
+                if edad >= 18 and edad <= 90:
+                    edad = edad
+            legajo =prompt("TP5","Ingrese legajo")
+            if legajo == None:
+                bandera = 0
+            else:
+                if len(legajo) > 4:
+
+                    bandera = 0
+                #legajo = int(legajo)
+
+            bandera = 0
+
+
+        self.txt_apellido.delete(0,"end")
+        self.txt_edad.delete(0,"end")
+        self.txt_legajo.delete(0,"end")
+
+        if bandera == 0:
+            self.txt_apellido.insert(0,apellido)
+            self.txt_edad.insert(0,edad)
+            self.txt_legajo.insert(0,legajo)
 
 if __name__ == "__main__":
     app = App()

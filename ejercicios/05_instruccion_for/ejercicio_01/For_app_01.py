@@ -7,11 +7,14 @@ import random
 
 
 '''
+nombre: Anahí Julieta
+apellido: González Pineda
+---
 Al presionar el botón Mostrar 5 veces un mensaje (utilizando el Dialog Alert) con números ASCENDENTES, desde el 1 al 5.
 '''
 
 class App(customtkinter.CTk):
-    
+
     def __init__(self):
         super().__init__()
 
@@ -23,9 +26,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass 
-       
-            
+        for i in range(1,6,1):
+            alert("Ej_1",i)
+        pass
+
 
 if __name__ == "__main__":
     app = App()
