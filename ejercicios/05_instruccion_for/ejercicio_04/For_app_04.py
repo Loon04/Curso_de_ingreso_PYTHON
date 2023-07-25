@@ -30,6 +30,12 @@ class App(customtkinter.CTk):
             if numero == 9:
                 break
 
+        for contador in range(999):
+            numero = prompt("ej_4","ingrese un numero")
+            if numero != None and int(numero) == 9:
+                break
+        alert("ej_4","Rompimos el for")
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

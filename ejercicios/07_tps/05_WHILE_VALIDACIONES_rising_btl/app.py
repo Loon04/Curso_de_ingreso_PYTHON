@@ -52,39 +52,33 @@ class App(customtkinter.CTk):
     def btn_validar_on_click(self):
 
         bandera = 1
-        tipo =self.combobox_tipo.get()
 
         while bandera == 1:
             apellido = prompt("TP5","Ingrese su apellido")
-            if apellido == None:
-                bandera = 0
+            while apellido == None or apellido == "":
+                apellido = prompt("TP5","ERROR, Ingrese su apellido")
             edad = prompt("TP5","Ingrese su edad")
-            if edad == None:
-                bandera = 0
-            else:
-                edad = int(edad)
-                if edad >= 18 and edad <= 90:
-                    edad = edad
-            legajo =prompt("TP5","Ingrese legajo")
-            if legajo == None:
-                bandera = 0
-            else:
-                if len(legajo) > 4:
-
-                    bandera = 0
-                #legajo = int(legajo)
+            while  edad == None or edad == "" or int(edad) < 18 or int(edad) > 90:
+                edad = prompt("TP5","ERROR, Ingrese su edad")
+            estado = prompt("TP5","Estado civil Soltero/a, Casado/a, Divorciado/a, Viudo/a")
+            while estado == None or edad == "" or (estado != "Soltero/a" and estado != "Casado/a" and estado != "Divorciado/a" and estado != "Viudo"):
+                estado = prompt("TP_5","ERROR, Estado civil Soltero/a, Casado/a, Divorciado/a, Viudo/a")
+            legajo = prompt("TP5","Ingrese legajo")
+            while legajo == None or legajo == "" or int(legajo) < 1000 or int(legajo) > 9999:
+                legajo =prompt("TP5","ERROR, ingrese legajo")
 
             bandera = 0
-
 
         self.txt_apellido.delete(0,"end")
         self.txt_edad.delete(0,"end")
         self.txt_legajo.delete(0,"end")
 
+
         if bandera == 0:
             self.txt_apellido.insert(0,apellido)
             self.txt_edad.insert(0,edad)
             self.txt_legajo.insert(0,legajo)
+            self.combobox_tipo.set(estado)
 
 if __name__ == "__main__":
     app = App()

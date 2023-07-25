@@ -5,12 +5,15 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-Al presionar el botón  'Mostrar', se deberán mostrar los números 
+nombre: Anahí Julieta
+apellido: González Pineda
+---
+Al presionar el botón  'Mostrar', se deberán mostrar los números
 almacenados en el vector lista_datos utilizando Dialog Alert para informar cada elemento.
 '''
 
 class App(customtkinter.CTk):
-    
+
     def __init__(self):
         super().__init__()
 
@@ -24,10 +27,16 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-        
-        
-    
+
+        for numero in self.lista_datos:
+            alert("ej_1",numero)
+
+        #for numero in range(0,len(self.lista_datos)):
+        #    print(numero)
+
+
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

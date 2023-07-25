@@ -25,8 +25,14 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero = int(prompt("ej_4","ingrese un numero"))
+        contador = 0
 
+        for i in range(2,numero+1,2):
+            if numero % 2 == 0:  #si numero es divisible por 2, el resto me tiene que dar 0
+                contador += 1
+                print(i)
+        alert("ej_6",contador)
 
 if __name__ == "__main__":
     app = App()
