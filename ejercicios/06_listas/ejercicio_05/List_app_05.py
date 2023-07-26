@@ -27,6 +27,11 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
+        contador = 0
+
+        for i in self.lista_datos:
+            contador = contador + i
+        alert("ej_5",contador)
         pass
 
 if __name__ == "__main__":

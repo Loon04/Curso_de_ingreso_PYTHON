@@ -27,9 +27,18 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
+        flag = 1
+        max = 0
+        for i in self.lista_datos: #i va a tomar los valores de  la lista
+            if flag == 1:
+                max = i
+                flag = 0
+            else:
+                if i > max:
+                    max = i
+        alert("ej_3","el maximo es: "+str (max))
 
 
-        pass
 
 if __name__ == "__main__":
     app = App()
