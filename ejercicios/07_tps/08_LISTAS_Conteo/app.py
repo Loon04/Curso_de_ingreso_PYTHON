@@ -5,9 +5,12 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
+nombre: Anahí Julieta
+apellido: González Pineda
+---
 Enunciado:
 Al presionar el botón ‘Comenzar ingreso’, solicitar mediante prompt todos los números que el
-usuario quiera hasta que presione el botón Cancelar (en el prompt). 
+usuario quiera hasta que presione el botón Cancelar (en el prompt).
 Luego calcular:
     a. La suma acumulada de los negativos
     b. La suma acumulada de los positivos
@@ -43,11 +46,62 @@ class App(customtkinter.CTk):
 
         self.lista = []
 
-    def btn_comenzar_ingreso_on_click(self):
-        pass
 
+    def btn_comenzar_ingreso_on_click(self):
+        bandera = 1
+
+        while bandera == 1:
+            numero = prompt("TP_8","Ingrese un numero")
+            if numero != None:
+                numero = int(numero)
+                self.lista.append(numero)
+            else:
+                if numero == None:
+                    bandera = 0
     def btn_mostrar_estadisticas_on_click(self):
-        pass
+
+        suma_negativos = 0
+        suma_positivos = 0
+        acumulador_nrosPositivo = 0
+        contador_nrosNegativo = 0
+        contador_ceros = 0
+        bandera_2 = 1
+        minimo = 0
+        maximo = 0
+
+        for elemento in self.lista:
+            if bandera_2 == 1:
+                minimo = elemento
+                maximo = elemento
+                bandera_2 = 0
+            else:
+                if elemento < minimo:
+                    minimo = elemento
+                else:
+                    if elemento > maximo:
+                        maximo = elemento
+
+            if elemento < 0:
+                suma_negativos = suma_negativos + elemento
+                contador_nrosNegativo += 1
+            else:
+                if elemento > 0:
+                    suma_positivos = suma_positivos + elemento
+                    acumulador_nrosPositivo += 1
+                else:
+                    contador_ceros += 1
+
+        promedio_negativos = suma_negativos / contador_nrosNegativo
+        print(self.lista)
+        alert("TP_8", """La suma acumulada de los negativos: {0}
+La suma acumulada de los positivos: {1}
+Cantidad de números positivos ingresados: {2}
+Cantidad de números negativos ingresados: {3}
+Cantidad de ceros: {4}
+El minimo de los negativos: {5}
+El maximo de los positivos: {6}
+El promedio de los negativos: {7}""".format(suma_negativos,suma_positivos,acumulador_nrosPositivo,contador_nrosNegativo,contador_ceros,minimo,maximo,promedio_negativos))
+
 
 
 if __name__ == "__main__":

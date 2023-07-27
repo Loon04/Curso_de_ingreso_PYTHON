@@ -1,7 +1,7 @@
 '''
-UTN Software Factory está en la búsqueda de programadores para incorporar a su equipo de 
-trabajo. En las próximas semanas se realizará un exhaustivo proceso de selección. Para ello se 
-ingresarán los siguientes datos de los 10 postulantes para luego establecer distintas métricas 
+UTN Software Factory está en la búsqueda de programadores para incorporar a su equipo de
+trabajo. En las próximas semanas se realizará un exhaustivo proceso de selección. Para ello se
+ingresarán los siguientes datos de los 10 postulantes para luego establecer distintas métricas
 necesarias para tomar decisiones a la hora de la selección:
 
 Nombre
@@ -11,7 +11,7 @@ Tecnología (PYTHON - JS - ASP.NET)
 Puesto (Jr - Ssr - Sr)
 
 Informar por pantalla:
-a. Cantidad de postulantes de genero no binario (NB) que programan en ASP.NET o JS 
+a. Cantidad de postulantes de genero no binario (NB) que programan en ASP.NET o JS
 cuya edad este entre 25 y 40, que se hayan postulado para un puesto Ssr.
 b. Nombre del postulante Jr con menor edad.
 c. Promedio de edades por género.
@@ -41,6 +41,10 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
+
+        for i in (1,11):
+            nombre = prompt("TP_7","ingrese un nombre")
+
         pass
 
 
