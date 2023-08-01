@@ -19,7 +19,7 @@ d. Tecnologia con mas postulantes (solo hay una).
 e. Porcentaje de postulantes de cada genero.
 
 Todos los datos se ingresan por prompt y los resultados se muestran por consola (print)
-
+(no hay que hacerlo con lista)
 '''
 import tkinter
 from tkinter.messagebox import showinfo as alert

@@ -56,8 +56,7 @@ class App(customtkinter.CTk):
                 numero = int(numero)
                 self.lista.append(numero)
             else:
-                if numero == None:
-                    bandera = 0
+                bandera = 0
     def btn_mostrar_estadisticas_on_click(self):
 
         suma_negativos = 0
