@@ -1,0 +1,243 @@
+
+[
+    {
+        "question": "¿Prefieres pizza o hamburguesas?",
+        "rojo": "Hambuerguesa",
+        "azul": "Pizza",
+        "votante_1": 0,
+        "votante_2": 0,
+        "votante_3": 1,
+        "votante_4": 0,
+        "votante_5": 0,
+        "correct_answer": "Pizza"
+    },
+
+    {
+        "question": "¿Elegirías ver una película en casa o en el cine?",
+        "rojo": "Cine",
+        "azul": "Casa",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Casa"
+    },
+
+    {
+        "question": "¿Optarías por tener un día soleado o nublado?",
+        "rojo": "Soleado",
+        "azul": "Nublado",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Nublado"
+    },
+
+    {
+        "question": "¿Te gustaría más el verano o el invierno?",
+        "rojo": "Verano",
+        "azul": "Invierno",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 1,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Verano"
+    },
+
+    {
+        "question": "¿Preferirías tener un perro o un gato como mascota?",
+        "rojo": "Gato",
+        "azul": "Perro",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Perro"
+    },
+
+    {
+        "question": "¿Escogerías leer un libro o ver una serie?",
+        "rojo": "Serie",
+        "azul": "Libro",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 1,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Serie"
+    },
+
+    {
+        "question": "¿Te gustaría más la playa o la piscina?",
+        "rojo": "Playa",
+        "azul": "Piscina",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 1,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Playa"
+    },
+
+    {
+        "question": "¿Optarías por chocolate o vainilla?",
+        "rojo": "Vainilla",
+        "azul": "Chocolate",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Chocolate"
+    },
+
+    {
+        "question": "¿Elegirías viajar en avión o en coche?",
+        "rojo": "Coche",
+        "azul": "Avión",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 0,
+        "correct_answer": "Avión"
+    },
+
+    {
+        "question": "¿Prefieres el té o el café?",
+        "rojo": "Café",
+        "azul": "Té",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 1,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Café"
+    },
+
+    {
+        "question": "¿Te gustaría más el día o la noche?",
+        "rojo": "Día",
+        "azul": "Noche",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Día"
+    },
+
+    {
+        "question": "¿Optarías por una cena casera o comer en un restaurante?",
+        "rojo": "Casera",
+        "azul": "Restaurante",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Restaurante"
+    },
+
+    {
+        "question": "¿Preferirías vivir en la ciudad o en el campo?",
+        "rojo": "Ciudad",
+        "azul": "Campo",
+        "votante_1": 0,
+        "votante_2": 1,
+        "votante_3": 1,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Ciudad"
+    },
+
+    {
+        "question": "¿Elegirías tener superpoderes de volar o invisibilidad?",
+        "rojo": "Volar",
+        "azul": "Invisibilidad",
+        "votante_1": 0,
+        "votante_2": 0,
+        "votante_3": 1,
+        "votante_4": 0,
+        "votante_5": 0,
+        "correct_answer": "Invisibilidad"
+    },
+
+    {
+        "question": "¿Te gustaría más la música pop o el rock?",
+        "rojo": "Pop",
+        "azul": "Rock",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Rock"
+    },
+
+    {
+        "question" : "¿Optarías por la playa con palmeras o la montaña con pinos?",
+        "rojo" : "Playa con palmeras",
+        "azul": "Montaña con pinos",
+        "votante_1": 1,
+        "votante_2": 0,
+        "votante_3": 1,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Playa con palmeras"
+    },
+
+    {
+        "question": "¿Prefieres trabajar en equipo o de manera independiente?",
+        "rojo": "Equipo",
+        "azul": "Independiente",
+        "votante_1": 1,
+        "votante_2": 1,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 1,
+        "correct_answer": "Equipo"
+    },
+
+    {
+        "question": "¿Te gustaría más la comedia o el drama?",
+        "rojo": "Comedia",
+        "azul": "Drama",
+        "votante_1": 0,
+        "votante_2": 1,
+        "votante_3": 1,
+        "votante_4": 1,
+        "votante_5": 1,
+        "correct_answer": "Comedia"
+    },
+
+    {
+        "question": "¿Elegirías tener una conversación por teléfono o por mensaje de texto?",
+        "rojo": "Telefono",
+        "azul": "Mensaje",
+        "votante_1": 0,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 1,
+        "votante_5": 0,
+        "correct_answer": "Mensaje"
+    },
+
+    {
+        "question": "¿Optarías por un día lluvioso o un día nevado?",
+        "rojo": "Lluvioso",
+        "azul": "Nevado",
+        "votante_1": 0,
+        "votante_2": 0,
+        "votante_3": 0,
+        "votante_4": 0,
+        "votante_5": 0,
+        "correct_answer": "Nevado"
+    }
+]
+
